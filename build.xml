@@ -1,0 +1,13 @@
+<project default="compile">
+    <target name="compile">
+        <mkdir dir="classes/production"/>
+        <javac srcdir="src" destdir="classes/production"/>
+    </target>
+    <jar destfile = "chess.jar"	 basedir = "classes/production" includes="**">
+      <manifest>
+	<attribute name = "Main-Class" value = "Chess.Chess"/>
+      </manifest>
+    </jar>
+</project>
+
+
